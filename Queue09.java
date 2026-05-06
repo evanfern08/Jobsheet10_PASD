@@ -23,9 +23,10 @@ class Queue09 {
 
     public void Enqueue(Mahasiswa09 dt) {
         if (IsFull()) {
-            System.out.println("Queue penuh!");
-            return;
-        }
+        System.out.println("Queue penuh!");
+        System.exit(0);
+    }
+
         if (IsEmpty()) {
             front = rear = 0;
         } else {
@@ -55,9 +56,10 @@ class Queue09 {
 
     public void print() {
         if (IsEmpty()) {
-            System.out.println("Queue kosong");
-            return;
-        }
+        System.out.println("Queue kosong!");
+        System.exit(0);
+    }
+    
         int i = front;
         for (int j = 0; j < size; j++) {
             data[i].tampil();
